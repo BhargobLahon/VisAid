@@ -130,7 +130,7 @@ export default function MultilingualCameraApp() {
         } as any);
 
         // Make API call - UPDATE THIS IP ADDRESS TO YOUR SERVER'S IP
-        const response = await fetch('http://192.168.9.7:8000/analyze-image', {
+        const response = await fetch('http://192.168.137.1:8000/analyze-image', {
           method: 'POST',
           body: formData,
           headers: {

@@ -80,7 +80,11 @@ async def analyze_image(file: UploadFile = File(...)):
 @app.get("/")
 async def root():
     return {"message": "Multilingual Image Analysis API is running"}
-
+# Add this inside server.py, near your other @app.get("/")
+@app.get("/ping")
+async def ping():
+    print("✅ Received ping!")
+    return {"message": "pong"}
 @app.get("/health")
 async def health_check():
     return {
